@@ -1,0 +1,301 @@
+/*Table of contents
+1) Fonts
+2) Page Layouts
+3) Title Layouts
+
+
+*/
+
+
+/* 1 - Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
+
+/* 2 - Page Layouts */
+
+.page-wrapper{
+    background-color: #55ebfc;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 3 - Title Layouts*/
+.title {
+    color: black;
+}
+.titlemain {
+    font-size: 230%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+    font-family: 'Londrina Outline', cursive;
+}
+.titlesecond {
+    padding-top: 70px;
+    font-size:100%;
+}
+.titleothers {
+    text-align: right;
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* 4- Main Images */
+.image_std{
+    padding: 20px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 900px;
+    box-shadow: 0 0 250px rgba(0,0,0,0.95) inset;
+}
+.top-image{
+	background: linear-gradient(rgba(121, 85, 72, 0.45), rgba(121, 85, 72, 0.45)),
+url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_9979.jpg);
+}
+.center-image{
+	background: linear-gradient(rgba(121, 85, 72, 0.45), rgba(121, 85, 72, 0.45)),
+url(https://i.imgur.com/XM2s6P7.jpg);
+}
+.bottom-image{
+	background: linear-gradient(rgba(121, 85, 72, 0.45), rgba(121, 85, 72, 0.45)),
+url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
+}
+
+
+/* 5- Vehicle Choice Styling*/
+.veh_choices{
+    font-family: 'Raleway', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: #fff;
+}
+.veh_buttons{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 5px;
+    grid-template-areas:
+            "one one one one one one one one one one one one"
+            "two two two two two two two two two two two two"
+            "three three three three three three three three three three three three";
+    color: #fff;
+    padding: 20px;
+}
+.veh_images{
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    border-radius: 20px;
+}
+.veh_boxone{
+    grid-area: one;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.veh_one{
+    background: -moz-linear-gradient(bottom, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/eJJIrQj.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 500px;
+}
+.veh_one:hover{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.veh_two{
+    grid-area: two;
+    background: -moz-linear-gradient(bottom, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/PZxIOka.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.veh_two:hover{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.veh_three{
+    grid-area: three;
+    background: -moz-linear-gradient(bottom, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/HuPdFxc.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.veh_three:hover{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.veh_text{
+    font-size: 100%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #fff;
+    width: 450px;
+}
+.veh_oneword{
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.veh_oneword:hover{
+    color:red;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 35px;
+}
+.veh_twoword{
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.veh_twoword:hover{
+    color:red;
+}
+.veh_threeword{
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.veh_threeword:hover{
+    color:red;
+}
+
+
+/* 6- Site Choice Styling (photos, news, upcoming */
+.site_choices{
+    font-family: 'Raleway', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: #fff;
+}
+.site_buttons{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 250px 250px 250px;
+    grid-gap: 5px;
+    grid-template-areas:
+            "one one one one . . four four four four four four"
+            "two two two two . . five five five five five five"
+            "three three three three . . six six six six six six";
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.site_images{
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    border-radius: 20px;
+}
+.site_one{
+    grid-area: one;
+    background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/n1nYo2T.jpg);
+    background-size: 100%;
+}
+.site_two {
+    grid-area: two;
+    background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/48YWRHF.jpg);
+    background-size: 100%;
+}
+.site_three{
+    grid-area: three;
+    background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/nzP4a39.jpg);
+    background-size: 100%;
+}
+.site_text{
+    font-size: 100%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.site_oneword{
+    grid-area: four;
+}
+.site_twoword{
+    grid-area: five;
+}
+.site_threeword{
+    grid-area: six;
+}
+
+
+/* 7- Site Blog Choice Styling */
+.site_blog{
+    font-family: 'Raleway', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: #fff;
+}
+.blog_buttons{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 250px 250px 250px;
+    grid-gap: 5px;
+    grid-template-areas:
+        "one one one one . . four four four four four four"
+        "two two two two . . five five five five five five"
+        "three three three three . . six six six six six six";
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.blog_images{
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    border-radius: 20px;
+}
+.blog_one{
+    grid-area: one;
+    background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/Mi6vMHB.jpg);
+    background-size: 100%;
+}
+.blog_two{
+    grid-area: two;
+    background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/FJK904Z.jpg);
+    background-size: 100%;
+}
+.blog_three{
+    grid-area: three;
+    background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/35yeNIP.jpg);
+    background-size: 100%;
+}
+.blog_text{
+    font-size: 100%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.blog_oneword{
+    grid-area: four;
+}
+.blog_twoword{
+    grid-area: five;
+}
+.blog_threeword{
+    grid-area: six;
+}
+
+
+/* footer styling*/
+.footy{
+    font-size: 70%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
