@@ -25,3 +25,14 @@ also new: layout3.css
 Brown paper drawing - that's the template.
 starting on vehiclechoice.html now
 started on vc1.css now
+
+###### index page has 3 sections - vehicle choice section, 
+###### site navigation section, and a blog section
+###### I think the site navigation section is a placeholder.
+
+#### Wednesday 12/13/2017
+Laid out vehiclechoice.html and styled it
+I need a hblog.html page next - but before that, 
+I will be going through django girls tutorial for blogs.
+
+

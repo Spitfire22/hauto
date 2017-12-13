@@ -80,14 +80,17 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
 .sidebar_layout{
     grid-area: s;
     background-color: rgba(0,255,0,.4);
+    color: #ffffff;
 }
 .image_layout{
     grid-area: i;
     background-color: rgba(255,0,0,.4);
+    color: #ffffff;
 }
 .detail_layout{
     grid-area: d;
     background-color: rgba(0,0,255,.4);
+    color: #ffffff;
 }
 
 /* footer styling*/
