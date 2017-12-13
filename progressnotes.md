@@ -4,11 +4,24 @@ Worked on index2.html - I didn't like what was going on with index.html so I sta
 Left off making 3 images for the top part. 
 
 Items to look into:
-- hover effect where the image grows in size and the edges go from rounded to pointed
 - finish up the front page look
-- header color change ideas where several different 'livery' auto change on reload (kinda a stretch idea)
 
 For Tuesday: 
 Finish front page for now,
 Work on the car detail page
 work on the blog page
+
+
+
+Random Ideas:
+- footer quote: random Zen footer quote
+- rotating theme header with different livery color schemes.
+
+#### Tuesday 12/12/2017
+Updated to index3.html - had to fix bugs with the css, 
+the only way to accomplish that was to copy/pasta
+also new: layout3.css
+
+Brown paper drawing - that's the template.
+starting on vehiclechoice.html now
+started on vc1.css now

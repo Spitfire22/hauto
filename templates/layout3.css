@@ -82,7 +82,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
 .veh_buttons{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 250px;
+    grid-template-rows: 250px 250px 250px;
     grid-gap: 5px;
     grid-template-areas:
             "one one one one one one one one one one one one"
@@ -103,6 +103,17 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     flex-direction: row;
     justify-content: space-evenly;
 }
+.veh_boxone:hover .veh_one{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.veh_boxone:hover .veh_oneword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
+}
 .veh_one{
     background: -moz-linear-gradient(bottom, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/eJJIrQj.jpg);
     background-size: 100%;
@@ -110,70 +121,78 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     background-position: center;
     transition: 2s;
     transition-timing-function: ease;
-    width: 500px;
+    width: 40%;
 }
-.veh_one:hover{
+.veh_boxtwo{
+    grid-area: two;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.veh_boxtwo:hover .veh_two{
     background-size: 120%;
     border-radius: 0;
     color:red;
 }
+.veh_boxtwo:hover .veh_twoword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
+}
 .veh_two{
-    grid-area: two;
     background: -moz-linear-gradient(bottom, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/PZxIOka.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position: center;
     transition: 2s;
     transition-timing-function: ease;
+    width: 40%;
 }
-.veh_two:hover{
+.veh_boxthree{
+    grid-area: three;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.veh_boxthree:hover .veh_three{
     background-size: 120%;
     border-radius: 0;
     color:red;
 }
+.veh_boxthree:hover .veh_threeword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
+}
 .veh_three{
-    grid-area: three;
     background: -moz-linear-gradient(bottom, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/HuPdFxc.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position: center;
     transition: 2s;
     transition-timing-function: ease;
-}
-.veh_three:hover{
-    background-size: 120%;
-    border-radius: 0;
-    color:red;
+    width: 40%;
 }
 .veh_text{
     font-size: 100%;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #fff;
-    width: 450px;
+    width: 50%;
 }
 .veh_oneword{
     transition: 2s;
     transition-timing-function: ease;
 }
-.veh_oneword:hover{
-    color:red;
-    background-color: rgba(255,255,255,.5);
-    border-radius: 35px;
-}
 .veh_twoword{
     transition: 2s;
     transition-timing-function: ease;
 }
-.veh_twoword:hover{
-    color:red;
-}
 .veh_threeword{
     transition: 2s;
     transition-timing-function: ease;
-}
-.veh_threeword:hover{
-    color:red;
 }
 
 
@@ -190,9 +209,9 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     grid-template-rows: 250px 250px 250px;
     grid-gap: 5px;
     grid-template-areas:
-            "one one one one . . four four four four four four"
-            "two two two two . . five five five five five five"
-            "three three three three . . six six six six six six";
+          "one one one one one one one one one one one one"
+          "two two two two two two two two two two two two"
+          "three three three three three three three three three three three three";
     color: #fff;
     border-radius: 5px;
     padding: 20px;
@@ -203,40 +222,103 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     text-align:center;
     border-radius: 20px;
 }
-.site_one{
+.site_boxone{
     grid-area: one;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.site_boxone:hover .site_one{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.site_boxone:hover .site_oneword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
+}
+.site_one{
     background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/n1nYo2T.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
+}
+.site_boxtwo{
+    grid-area: two;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.site_boxtwo:hover .site_two{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.site_boxtwo:hover .site_twoword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
 }
 .site_two {
-    grid-area: two;
     background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/48YWRHF.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
+}
+.site_boxthree{
+    grid-area: three;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.site_boxthree:hover .site_three{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.site_boxthree:hover .site_threeword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
 }
 .site_three{
-    grid-area: three;
     background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/nzP4a39.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
 }
 .site_text{
     font-size: 100%;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #fff;
+    width: 50%;
 }
 .site_oneword{
-    grid-area: four;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 .site_twoword{
-    grid-area: five;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 .site_threeword{
-    grid-area: six;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 
-
 /* 7- Site Blog Choice Styling */
-.site_blog{
+.blog_blog{
     font-family: 'Raleway', sans-serif;
     font-size: 150%;
     text-align: center;
@@ -248,9 +330,9 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     grid-template-rows: 250px 250px 250px;
     grid-gap: 5px;
     grid-template-areas:
-        "one one one one . . four four four four four four"
-        "two two two two . . five five five five five five"
-        "three three three three . . six six six six six six";
+          "one one one one one one one one one one one one"
+          "two two two two two two two two two two two two"
+          "three three three three three three three three three three three three";
     color: #fff;
     border-radius: 5px;
     padding: 20px;
@@ -261,35 +343,99 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     text-align:center;
     border-radius: 20px;
 }
-.blog_one{
+.blog_boxone{
     grid-area: one;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.blog_boxone:hover .blog_one{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.blog_boxone:hover .blog_oneword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
+}
+.blog_one{
     background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/Mi6vMHB.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
+}
+.blog_boxtwo{
+    grid-area: two;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.blog_boxtwo:hover .blog_two{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.blog_boxtwo:hover .blog_twoword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
 }
 .blog_two{
-    grid-area: two;
     background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/FJK904Z.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
+}
+.blog_boxthree{
+    grid-area: three;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.blog_boxthree:hover .blog_three{
+    background-size: 120%;
+    border-radius: 0;
+    color:red;
+}
+.blog_boxthree:hover .blog_threeword{
+    color:red;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 35px;
+    font-size: 150%;
 }
 .blog_three{
-    grid-area: three;
     background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/35yeNIP.jpg);
     background-size: 100%;
+    background-position: center;
+    transition: 2s;
+    transition-timing-function: ease;
+    width: 40%;
 }
 .blog_text{
     font-size: 100%;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #fff;
+    width: 50%;
 }
 .blog_oneword{
-    grid-area: four;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 .blog_twoword{
-    grid-area: five;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 .blog_threeword{
-    grid-area: six;
+    transition: 2s;
+    transition-timing-function: ease;
 }
 
 
