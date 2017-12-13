@@ -48,7 +48,7 @@ body {
 }
 
 
-/* 4- Main Images */
+/*  Main Images */
 .image_std{
     padding: 20px;
     background-attachment: fixed;
@@ -60,130 +60,35 @@ body {
 }
 .center-image{
 	background: linear-gradient(rgba(121, 85, 72, 0.45), rgba(121, 85, 72, 0.45)),
-url(https://i.imgur.com/XM2s6P7.jpg);
+url(https://i.imgur.com/Ax8M3WN.jpg);
 }
 
-/* 6- Site Choice Styling (photos, news, upcoming */
-.site_choices{
-    font-family: 'Raleway', sans-serif;
-    font-size: 150%;
-    text-align: center;
-    color: #fff;
-}
-.site_buttons{
+/* display */
+.main_grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 250px 250px 250px;
-    grid-gap: 5px;
+    grid-template-rows: 150px 150px 150px 150px 150px 150px;
     grid-template-areas:
-          "one one one one one one one one one one one one"
-          "two two two two two two two two two two two two"
-          "three three three three three three three three three three three three";
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-}
-.site_images{
-    font-size: 150%;
-    font-family: 'Raleway', sans-serif;
-    text-align:center;
-    border-radius: 20px;
-}
-.site_boxone{
-    grid-area: one;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.site_boxone:hover .site_one{
-    background-size: 120%;
-    border-radius: 0;
-    color:red;
-}
-.site_boxone:hover .site_oneword{
-    color:red;
-    background-color: rgba(0,0,0,.3);
-    border-radius: 35px;
-    font-size: 150%;
-}
-.site_one{
-    background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/n1nYo2T.jpg);
-    background-size: 100%;
-    background-position: center;
-    transition: 2s;
-    transition-timing-function: ease;
-    width: 40%;
-}
-.site_boxtwo{
-    grid-area: two;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.site_boxtwo:hover .site_two{
-    background-size: 120%;
-    border-radius: 0;
-    color:red;
-}
-.site_boxtwo:hover .site_twoword{
-    color:red;
-    background-color: rgba(0,0,0,.3);
-    border-radius: 35px;
-    font-size: 150%;
-}
-.site_two {
-    background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/48YWRHF.jpg);
-    background-size: 100%;
-    background-position: center;
-    transition: 2s;
-    transition-timing-function: ease;
-    width: 40%;
-}
-.site_boxthree{
-    grid-area: three;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.site_boxthree:hover .site_three{
-    background-size: 120%;
-    border-radius: 0;
-    color:red;
-}
-.site_boxthree:hover .site_threeword{
-    color:red;
-    background-color: rgba(0,0,0,.3);
-    border-radius: 35px;
-    font-size: 150%;
-}
-.site_three{
-    background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/nzP4a39.jpg);
-    background-size: 100%;
-    background-position: center;
-    transition: 2s;
-    transition-timing-function: ease;
-    width: 40%;
-}
-.site_text{
-    font-size: 100%;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    color: #fff;
-    width: 50%;
-}
-.site_oneword{
-    transition: 2s;
-    transition-timing-function: ease;
-}
-.site_twoword{
-    transition: 2s;
-    transition-timing-function: ease;
-}
-.site_threeword{
-    transition: 2s;
-    transition-timing-function: ease;
+            "s s s i i i i i i i i i"
+            "s s s i i i i i i i i i"
+            "s s s i i i i i i i i i"
+            "s s s i i i i i i i i i"
+            "s s s d d d d d d d d d"
+            "s s s d d d d d d d d d";
 }
 
+.sidebar_layout{
+    grid-area: s;
+    background-color: rgba(0,255,0,.4);
+}
+.image_layout{
+    grid-area: i;
+    background-color: rgba(255,0,0,.4);
+}
+.detail_layout{
+    grid-area: d;
+    background-color: rgba(0,0,255,.4);
+}
 
 /* footer styling*/
 .footy{
