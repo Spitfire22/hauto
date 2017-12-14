@@ -34,5 +34,7 @@ started on vc1.css now
 Laid out vehiclechoice.html and styled it
 I need a hblog.html page next - but before that, 
 I will be going through django girls tutorial for blogs.
-
+I got to a point where you deploy a blog to a website. I might try this on a different day. Right now, I carry on.
+Create an HTML for the hardblog. Can copy/pasta from other templates already made. 
+ENDO OF DDAYYEY
 
