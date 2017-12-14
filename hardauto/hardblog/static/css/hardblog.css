@@ -67,30 +67,15 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
 .main_grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 200px 200px 200px;
     grid-template-areas:
-            "s s s i i i i i i i i i"
-            "s s s i i i i i i i i i"
-            "s s s i i i i i i i i i"
-            "s s s i i i i i i i i i"
-            "s s s d d d d d d d d d"
-            "s s s d d d d d d d d d";
+            ". . f f f f f f f f f ."
+            ". . f f f f f f f f f ."
+            ". . f f f f f f f f f .";
 }
-
-.sidebar_layout{
-    grid-area: s;
-    background-color: rgba(0,255,0,.4);
-    color: #ffffff;
-}
-.image_layout{
-    grid-area: i;
-    background-color: rgba(255,0,0,.4);
-    color: #ffffff;
-}
-.detail_layout{
-    grid-area: d;
-    background-color: rgba(0,0,255,.4);
-    color: #ffffff;
+.full_post{
+    grid-area: f;
+    color: white;
 }
 
 /* footer styling*/

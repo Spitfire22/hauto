@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAuto: Road to Enlightenment</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hardblog.css' %}">
+    <script type="text/javascript" scr=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="title">
+            <h1 class="titlemain">HAuto</h1>
+            <div class="titlesecond">
+                <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
+                <div class="titleothers">your losses and bring inevitable victory </div>
+                <div class="titleothers">est 2017</div>
+            </div>
+        </header>
+        <div class="center-image image_std">
+            <div class="main_grid">
+                <div class="full_post">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+            <footer class="footy">
+                <p>Produced by Super Hard Auto ©</p>
+                <p>Preoccupied with a single leaf you won't see the tree.</p>
+            </footer>
+        <script type="text/javascript" scr=""></script>
+    </div>
+</body>
+</html>

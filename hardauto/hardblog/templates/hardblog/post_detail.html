@@ -1,9 +1,10 @@
 {% extends 'hardblog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% if post.published_date %}
         <p class="pub_date">published: {{ post.published_date }}</p>
-        <h1 class="post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    {% endif %}
+        <h1 class="post_title">{{ post.title }}</h1>
         <p class="post_text">{{ post.text|linebreaksbr}}</p>
-    {% endfor %}
+
 {% endblock %}

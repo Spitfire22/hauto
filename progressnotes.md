@@ -38,3 +38,6 @@ I got to a point where you deploy a blog to a website. I might try this on a dif
 Create an HTML for the hardblog. Can copy/pasta from other templates already made. 
 ENDO OF DDAYYEY
 
+#### Thursday 12/14/2017
+There is a really slick way of creating a base template and inserting other html inside.
+Good example is the base.html and post_list.html within the hardblog. 
