@@ -41,3 +41,5 @@ ENDO OF DDAYYEY
 #### Thursday 12/14/2017
 There is a really slick way of creating a base template and inserting other html inside.
 Good example is the base.html and post_list.html within the hardblog. 
+added a lot of functionality to the blog (draft, edit, publish, delete)
+Now to a point where I will be adding security to the site. 

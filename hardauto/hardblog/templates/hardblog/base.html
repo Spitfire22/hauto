@@ -19,6 +19,9 @@
                 <div class="titleothers">est 2017</div>
             </div>
         </header>
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="new_post"> + Create new post </a>
+        {% endif %}
         <div class="center-image image_std">
             <div class="main_grid">
                 <div class="full_post">
