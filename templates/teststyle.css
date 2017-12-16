@@ -1,0 +1,64 @@
+
+
+
+/* 1 - Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
+
+/* 2 - Page Layouts */
+
+.page-wrapper{
+    background-color: #55ebfc;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 3 - Title Layouts*/
+.title {
+    color: black;
+}
+.titlemain {
+    font-size: 230%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+     font-family: 'Londrina Outline', cursive;
+}
+.subtitle{
+    height: 200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px;
+  grid-template-areas:
+            "l l l l l . s s s s s s";
+}
+.titlesecond {
+  grid-area:s;
+    padding-top: 70px;
+    font-size:100%;
+}
+.titleothers {
+    text-align: right;
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.bloggo {
+  grid-area: l;
+    padding-top: 70px;
+    font-size:100%;
+}
+
+
+
+
+
+
+
+

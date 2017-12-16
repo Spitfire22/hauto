@@ -12,10 +12,26 @@
     <div class="page-wrapper">
         <header class="title">
             <h1 class="titlemain">HAuto</h1>
-            <div class="titlesecond">
-                <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
-                <div class="titleothers">your losses and bring inevitable victory </div>
-                <div class="titleothers">est 2017</div>
+            <div class="subtitle">
+                <div class="titlesecond">
+                    <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
+                    <div class="titleothers">your losses and bring inevitable victory </div>
+                    <div class="titleothers">est 2017</div>
+                </div>
+                <div class="bloggo">
+                    <div>
+                        <a href="{% url 'post_new' %}" class="top_menu"> + Create new post </a>
+                    </div>
+                    <div>
+                    <a href="{% url 'post_draft_list' %}" class="top_menu"> + Edit a draft </a>
+                    </div>
+                    <div>
+                    <p class="top_menu"> Hello _ username _ <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                    </div>
+                    <div>
+                    <a href="{% url 'login' %}" class="top_menu"> Login </a>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="top-image image_std">

@@ -43,3 +43,12 @@ There is a really slick way of creating a base template and inserting other html
 Good example is the base.html and post_list.html within the hardblog. 
 added a lot of functionality to the blog (draft, edit, publish, delete)
 Now to a point where I will be adding security to the site. 
+
+#### Friday 12/15/2017
+Added a users to the site
+Edited the index3.html and layout3.css in templates outside of the django project - ready to be placed
+######Next step: 
+- adding commenting to the blog pages
+- start moving over the index layout and linking the blog into the main index 
+- *Make sure your links aren't broken! you broke the login links to demo*
+- Might be a good idea to start up a separate project to try and make the vehicle choices
