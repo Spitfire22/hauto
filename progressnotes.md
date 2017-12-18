@@ -1,3 +1,20 @@
+Preoccupied by a single leaf, you won't see the tree
+
+# items to fix:
+1) blog section items:
+    - limit the number of blog posts per page, have the newest on front, oldest in back. Make the max 5?
+    - rotate backgrounds on each blog index page
+    - Figure out how to add images for the blog posts where it replaces the image on the index
+    - Fix the styling on *all* blog pages
+    
+2) index:
+    - hamburger menu on front page
+    - Link the 'HAuto' on the title to the index
+
+3) 
+
+
+
 ####Monday 12/11/2017
 Worked on index2.html - I didn't like what was going on with index.html so I started from scratch
 
@@ -52,3 +69,7 @@ Edited the index3.html and layout3.css in templates outside of the django projec
 - start moving over the index layout and linking the blog into the main index 
 - *Make sure your links aren't broken! you broke the login links to demo*
 - Might be a good idea to start up a separate project to try and make the vehicle choices
+
+#### Monday 12/18/2017
+Added commenting with admin approve/deny on the comments.
+
