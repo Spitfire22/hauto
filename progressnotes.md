@@ -11,7 +11,11 @@ Preoccupied by a single leaf, you won't see the tree
     - hamburger menu on front page
     - Link the 'HAuto' on the title to the index
 
-3) 
+3) vehicle:
+    - work on setting up your models
+    - think about the different ways you could get to the part the person is looking for
+    - in the parts model there should be a related parts field (different mfg relation)
+    - in the parts model there should be related parts eg: coolant temp sensor - both coolant system and electrical
 
 
 
