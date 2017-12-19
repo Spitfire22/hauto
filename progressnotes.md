@@ -76,4 +76,7 @@ Edited the index3.html and layout3.css in templates outside of the django projec
 
 #### Monday 12/18/2017
 Added commenting with admin approve/deny on the comments.
+Started a table that I am thinking of using with my models. Need to refine it so I have a clear understanding of all 
+    parts of the model.
 
+### Tuesday 12/19/2017
