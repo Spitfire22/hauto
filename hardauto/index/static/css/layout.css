@@ -37,28 +37,16 @@ body {
     background-color: yellow;
     font-family: 'Londrina Outline', cursive;
 }
-.subtitle{
-    height: 200px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px;
-  grid-template-areas:
-            "l l l l l . s s s s s s";
+.indexlink:link {
+    text-decoration: none;
 }
 .titlesecond {
-  grid-area: s;
     padding-top: 70px;
     font-size:100%;
 }
 .titleothers {
     text-align: right;
     padding-right: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-.bloggo {
-  grid-area: l;
-    padding-top: 70px;
-    font-size:100%;
     font-family: 'Montserrat', sans-serif;
 }
 

@@ -4,7 +4,7 @@
     {% for post in posts %}
         <p class="pub_date">published: {{ post.published_date }}</p>
         <h1 class="post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p class="post_text">{{ post.text|linebreaksbr}}</p>
+        <p class="post_text">{{ post.text|truncatechars:200}}</p>
         <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
     {% endfor %}
 {% endblock content%}

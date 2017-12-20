@@ -12,33 +12,18 @@
 <body>
     <div class="page-wrapper">
         <header class="title">
-            <h1 class="titlemain">HAuto</h1>
-            <div class="subtitle">
+            <h1 class="titlemain"><a class="indexlink" href="{% url 'index' %}">HAuto</a></h1>
                 <div class="titlesecond">
                     <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
                     <div class="titleothers">your losses and bring inevitable victory </div>
                     <div class="titleothers">est 2017</div>
                 </div>
-                <div class="bloggo">
-                    <div>
-                        <a href="{% url 'post_new' %}" class="top_menu"> + Create new post </a>
-                    </div>
-                    <div>
-                    <a href="{% url 'post_draft_list' %}" class="top_menu"> + Edit a draft </a>
-                    </div>
-                    <div>
-                    <p class="top_menu"> Hello _ username _ <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-                    </div>
-                    <div>
-                    <a href="{% url 'login' %}" class="top_menu"> Login </a>
-                    </div>
-                </div>
-            </div>
         </header>
         <div class="top-image image_std">
             <div>
                 <div class="veh_choices">
-                    <h3>The Road to Enlightenment.</h3>
+                    <h3>hardauto</h3>
+                    <p>The Road to Enlightenment.</p>
                     <p>To understand everything is to forgive everything.</p>
                     <p>Tour the vehicle below to continue your journey.</p>
                 </div>
@@ -73,7 +58,8 @@
         <div class="center-image image_std">
             <div>
                 <div class="site_choices">
-                    <h3>Nothing ever exists entirely alone.</h3>
+                    <h3>hardmedia</h3>
+                    <p>Nothing ever exists entirely alone.</p>
                     <p> Everything is in relation to everything else.</p>
                 </div>
 				<div class="site_buttons">
@@ -109,7 +95,8 @@
         <div class="bottom-image image_std">
             <div>
                 <div class="blog_blog">
-                    <h3>The search for happiness is one of the chief sources of unhappiness.</h3>
+                    <h3><a href="{% url 'post_list' %}">hardblog</a></h3>
+                    <p>The search for happiness is one of the chief sources of unhappiness.</p>
                     <p>When the mind is perfectly clear, what is is what we want.</p>
                 </div>
                 <div class="blog_buttons">

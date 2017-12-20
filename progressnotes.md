@@ -6,6 +6,7 @@ Preoccupied by a single leaf, you won't see the tree
     - rotate backgrounds on each blog index page
     - Figure out how to add images for the blog posts where it replaces the image on the index
     - Fix the styling on *all* blog pages
+    - Combining two filters on a template for the post_list.html on the line with class="post_text"
     
 2) index:
     - hamburger menu on front page
@@ -16,6 +17,15 @@ Preoccupied by a single leaf, you won't see the tree
     - think about the different ways you could get to the part the person is looking for
     - in the parts model there should be a related parts field (different mfg relation)
     - in the parts model there should be related parts eg: coolant temp sensor - both coolant system and electrical
+    
+4) stacking HTML files
+    - You can add onto all of the HTML files, the blog templates folder shows this. 
+    - either each of the apps have a 'main' file OR there is one purely main file.
+    - I am leaning towards each app having a 'main', Layouts can vastly differ when more apps get added on
+        I don't want to be held to a specific base look.
+    
+5) document
+    - Start making documentation, before the site gets unmanageable.
 
 
 
