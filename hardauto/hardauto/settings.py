@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hardblog.apps.HardblogConfig',
+    'index.apps.IndexConfig',
+    'vehicle.apps.VehicleConfig',
 ]
 
 MIDDLEWARE = [
