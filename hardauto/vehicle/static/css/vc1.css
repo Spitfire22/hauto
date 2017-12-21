@@ -46,7 +46,9 @@ body {
     padding-right: 10px;
     font-family: 'Montserrat', sans-serif;
 }
-
+.indexlink:link {
+    text-decoration: none;
+}
 
 /*  Main Images */
 .image_std{

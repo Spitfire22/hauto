@@ -7,4 +7,4 @@
         <p class="post_text">{{ post.text|truncatechars:200}}</p>
         <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
     {% endfor %}
-{% endblock content%}
+{% endblock %}
