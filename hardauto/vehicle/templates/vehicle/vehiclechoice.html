@@ -14,7 +14,7 @@
         <header class="title">
             <h1 class="titlemain">
                 <a class="indexlink" href="{% url 'index' %}">HAuto</a>
-                <a class="indexlink" href="{% url 'vehicle_list' %}">hardauto</a>
+                <a class="indexlink" href="{% url 'choicebar' %}">hardauto</a>
             </h1>
             <div class="titlesecond">
                 <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
@@ -22,18 +22,8 @@
                 <div class="titleothers">est 2017</div>
             </div>
         </header>
-
-        <div class="center-image image_std">
-            <div class="main_grid">
-                <div class="sidebar_layout">
-                    TEST
-                    {% block choicebar %}
+             {% block choicebar %}
                     {% endblock %}
-                </div>
-                <div class="image_layout"> This is the area image. Update with ajax</div>
-                <div class="detail_layout">/ part details/ youtube links / tools side. Update with ajax.</div>
-            </div>
-        </div>
             <footer class="footy">
                 <p>Produced by Super Hard Auto ©</p>
                 <p>The more you know, the less you need.</p>

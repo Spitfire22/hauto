@@ -2,9 +2,19 @@
 
 {% block choicebar %}
 
-    <div> Hi, I test. </div>
-    <h1>Test test</h1>
-    {% for make in makes %}
-        <div>{{ make.name }}</div>
-    {% endfor %}
+<div class="center-image image_std">
+    <div class="main_grid">
+        <div class="sidebar_layout">
+            <div>Vehicle:</div>
+
+            {% for make in makes %}
+            <div>{{ make }}</div>
+            {% endfor %}
+
+        </div>
+        <div class="image_layout"> This is the area image. Update with ajax</div>
+        <div class="detail_layout">/ part details/ youtube links / tools side. Update with ajax.</div>
+    </div>
+</div>
+
 {% endblock %}
