@@ -17,6 +17,8 @@ Preoccupied by a single leaf, you won't see the tree
     - think about the different ways you could get to the part the person is looking for
     - in the parts model there should be a related parts field (different mfg relation)
     - in the parts model there should be related parts eg: coolant temp sensor - both coolant system and electrical
+    - youtube links somewhere with the parts detail
+    - tools detail somewhere with the parts detail
     
 4) stacking HTML files
     - You can add onto all of the HTML files, the blog templates folder shows this. 

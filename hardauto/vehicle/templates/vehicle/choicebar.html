@@ -6,15 +6,74 @@
     <div class="main_grid">
         <div class="sidebar_layout">
             <div>Vehicle:</div>
+            <select id="select_make">
+                <option value="">Select a Make</option>
+                {% for make in make_choice %}
+                <option value="{{ make.id }}">{{ make.name }}</option>
+                {% endfor %}
+            </select>
 
-            {% for make in makes %}
-            <div>{{ make }}</div>
+            <select id="select_model" style="display:none">
+
+            </select>
+
+
+            {% for model in model_choice %}
+            <div>{{ model.name }}</div>
             {% endfor %}
 
         </div>
-        <div class="image_layout"> This is the area image. Update with ajax</div>
-        <div class="detail_layout">/ part details/ youtube links / tools side. Update with ajax.</div>
+        <div class="image_layout">
+            <div>Systems:</div>
+
+            {% for system in system_choice %}
+            <div>{{ system.name }}</div>
+            {% endfor %}
+
+        </div>
+        <div class="detail_layout">
+            <div>Parts:</div>
+
+            {% for part in part_choice%}
+            <div>{{ part.name }} {{ part.manufacturer }} {{ part.number }}</div>
+            {% endfor %}
+
+        </div>
     </div>
 </div>
+<script>
+    function http_get(url, success) {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                let data = JSON.parse(xhttp.responseText);
+                success(data);
+            }
+        };
+        xhttp.open("GET", url);
+        xhttp.send();
+    }
+
+    let select_make = document.querySelector('#select_make');
+    let select_model = document.querySelector('#select_model');
+
+    select_make.oninput = function() {
+        let make_id = select_make.options[select_make.selectedIndex].value;
+        console.log(make_id);
+        http_get("{% url 'vehicle:getmodels' %}?make_id="+make_id, function (data) {
+            select_model.style.display = 'inline-block';
+            while (select_model.firstChild) {
+                select_model.removeChild(select_model.firstChild);
+            }
+            for (let i=0; i<data.models.length; ++i) {
+                let option = document.createElement('option');
+                option.value = data.models[i].id;
+                option.innerText = data.models[i].name;
+                select_model.appendChild(option);
+            }
+        });
+    };
+
+</script>
 
 {% endblock %}

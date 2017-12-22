@@ -33,5 +33,6 @@ class Part(models.Model):
     system = models.ForeignKey(System,  on_delete=models.CASCADE)
     number = models.CharField(max_length=60)
 
+
     def __str__(self):
         return f'Manufacturer: {self.manufacturer}, Part Name: {self.name}, Part Number: {self.number}'

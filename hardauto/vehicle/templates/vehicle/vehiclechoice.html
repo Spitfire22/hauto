@@ -6,29 +6,27 @@
     <title>HAuto: Road to Enlightenment</title>
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="{% static 'css/vc1.css' %}">
-    <script type="text/javascript" scr=""></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="title">
-            <h1 class="titlemain">
-                <a class="indexlink" href="{% url 'index' %}">HAuto</a>
-                <a class="indexlink" href="{% url 'choicebar' %}">hardauto</a>
-            </h1>
-            <div class="titlesecond">
-                <div class="titleothers">hard auto: may your discovery restore your honor to avenge </div>
-                <div class="titleothers">your losses and bring inevitable victory </div>
-                <div class="titleothers">est 2017</div>
-            </div>
-        </header>
-             {% block choicebar %}
-                    {% endblock %}
-            <footer class="footy">
-                <p>Produced by Super Hard Auto ©</p>
-                <p>The more you know, the less you need.</p>
-            </footer>
-        <script type="text/javascript" scr=""></script>
-    </div>
+<div class="page-wrapper">
+    <header class="title">
+        <h1 class="titlemain">
+            <a class="indexlink" href="{% url 'index' %}">HAuto</a>
+            <a class="indexlink" href="{% url 'vehicle:choicebar' %}">hardauto</a>
+        </h1>
+        <div class="titlesecond">
+            <div class="titleothers">hard auto: may your discovery restore your honor to avenge</div>
+            <div class="titleothers">your losses and bring inevitable victory</div>
+            <div class="titleothers">est 2017</div>
+        </div>
+    </header>
+    {% block choicebar %}
+    {% endblock %}
+    <footer class="footy">
+        <p>Produced by Super Hard Auto ©</p>
+        <p>The more you know, the less you need.</p>
+    </footer>
+</div>
 </body>
 </html>
