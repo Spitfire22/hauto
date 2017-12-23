@@ -32,3 +32,14 @@ def getmodels(request):
             'name': model.name,
         })
     return JsonResponse(models)
+
+def getsystems(request):
+    model_id = request.GET['model_id']
+    model = Model.objects.get(pk=model_id)
+    systems = {'systems':[]}
+    for system in model.system_set.all():
+        systems['systems'].append({
+            'id': system.id,
+            'name': system.name,
+        })
+    return JsonResponse(systems)

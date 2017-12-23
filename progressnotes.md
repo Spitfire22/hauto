@@ -19,6 +19,7 @@ Preoccupied by a single leaf, you won't see the tree
     - in the parts model there should be related parts eg: coolant temp sensor - both coolant system and electrical
     - youtube links somewhere with the parts detail
     - tools detail somewhere with the parts detail
+    - 
     
 4) stacking HTML files
     - You can add onto all of the HTML files, the blog templates folder shows this. 
@@ -29,6 +30,21 @@ Preoccupied by a single leaf, you won't see the tree
 5) document
     - Start making documentation, before the site gets unmanageable.
 
+
+Over break:
+
+1) make drawings of cars (less than 1-minute per drawing)
+2) make drawings of systems (less than 1-minute per drawing)
+3) make drawings of cooling systems parts (less than 1-minute per drawing)
+4) convert drawings to SVG and host in imgur
+5) Finish up the selection tree to choose a specific system then those parts. (AJAX - in the HTML sheet choicebar.)
+6) Pagentation for the blog postings
+7) Create a app for the media section
+8) Work on styling the pages that need it - even if it isn't final styling, make it easier to visualize
+9) Fill in the database with at least 200 parts
+    - Get all of the cooling system mapped in
+    - Don't worry about all of the choices available - Just get what you can
+10)
 
 
 ####Monday 12/11/2017
@@ -92,3 +108,17 @@ Started a table that I am thinking of using with my models. Need to refine it so
     parts of the model.
 
 ### Tuesday 12/19/2017
+### Wednesday 12/20/2017
+I didn't take notes on these days once they were over.
+I must have entered in data, finished my models and got all of my different apps linked up to the index
+
+### Thursday 12/21/2017
+Morning: 5-min Stand-ups & AJAX Demo
+Afternoon: Signed up with Worksource Oregon, sent an email, filled out work history and other details.
+Got one item to display from my database to my screen
+
+
+### Friday 12/22/2017
+Got all of the items from the database displayed on the screen
+Got some of the selection stuff done with Matthews help
+Now I broke it again... @ 3:45

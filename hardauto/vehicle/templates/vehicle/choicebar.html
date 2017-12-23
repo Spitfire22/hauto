@@ -7,20 +7,13 @@
         <div class="sidebar_layout">
             <div>Vehicle:</div>
             <select id="select_make">
-                <option value="">Select a Make</option>
+                <option value="" selected="selected" disabled="disabled">Select a Make</option>
                 {% for make in make_choice %}
                 <option value="{{ make.id }}">{{ make.name }}</option>
                 {% endfor %}
             </select>
-
-            <select id="select_model" style="display:none">
-
-            </select>
-
-
-            {% for model in model_choice %}
-            <div>{{ model.name }}</div>
-            {% endfor %}
+            <select id="select_model" style="display:none"></select>
+            <select id="select_system" style="display:none"></select>
 
         </div>
         <div class="image_layout">
@@ -56,12 +49,12 @@
 
     let select_make = document.querySelector('#select_make');
     let select_model = document.querySelector('#select_model');
+    let select_system = document.querySelector('#select_system');
 
     select_make.oninput = function() {
         let make_id = select_make.options[select_make.selectedIndex].value;
-        console.log(make_id);
         http_get("{% url 'vehicle:getmodels' %}?make_id="+make_id, function (data) {
-            select_model.style.display = 'inline-block';
+            select_model.style.display = 'block';
             while (select_model.firstChild) {
                 select_model.removeChild(select_model.firstChild);
             }
@@ -70,6 +63,23 @@
                 option.value = data.models[i].id;
                 option.innerText = data.models[i].name;
                 select_model.appendChild(option);
+            }
+            select_model.oninput();
+        });
+    };
+
+    select_model.oninput = function() {
+        let model_id = select_model.options[select_model.selectedIndex].value;
+        http_get("{% url 'vehicle:getsystems' %}?model_id="+model_id, function (data){
+            select_system.style.display = 'block';
+            while (select_system.firstChild) {
+                select_system.removeChild(select_system.firstChild);
+            }
+            for (let i=0; i<data.systems.length; ++i) {
+                let option = document.createElement('option');
+                option.value = data.systems[i].id;
+                option.innerText = data.systems[i].name;
+                select_system.appendChild(option);
             }
         });
     };
