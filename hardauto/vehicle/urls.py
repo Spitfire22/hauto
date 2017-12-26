@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^choicebar/$', views.choicebar, name='choicebar'),
     url(r'^getmodels/$', views.getmodels, name='getmodels'),
     url(r'^getsystems/$', views.getsystems, name='getsystems'),
+    url(r'^getparts/$', views.getparts, name='getparts'),
 ]

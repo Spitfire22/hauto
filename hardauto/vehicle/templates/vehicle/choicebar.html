@@ -13,10 +13,11 @@
                 {% endfor %}
             </select>
             <select id="select_model" style="display:none"></select>
-            <select id="select_system" style="display:none"></select>
+
 
         </div>
         <div class="image_layout">
+            <select id="select_system" style="display:none"></select>
             <div>Systems:</div>
 
             {% for system in system_choice %}
@@ -25,7 +26,11 @@
 
         </div>
         <div class="detail_layout">
+
+
             <div>Parts:</div>
+
+            <select id="select_part" style="display:block"></select>
 
             {% for part in part_choice%}
             <div>{{ part.name }} {{ part.manufacturer }} {{ part.number }}</div>
@@ -50,6 +55,7 @@
     let select_make = document.querySelector('#select_make');
     let select_model = document.querySelector('#select_model');
     let select_system = document.querySelector('#select_system');
+    let select_part = document.querySelector('#select_part');
 
     select_make.oninput = function() {
         let make_id = select_make.options[select_make.selectedIndex].value;
@@ -80,6 +86,23 @@
                 option.value = data.systems[i].id;
                 option.innerText = data.systems[i].name;
                 select_system.appendChild(option);
+            }
+        });
+    };
+
+    select_part.oninput = function() {
+        let part_id = select_part.options[select_part.selectedIndex].value;
+        console.log('!!!')
+        http_get("{% url 'vehicle:getparts' %}?part_id="+part_id, function (data){
+            select_part.style.display = 'block';
+            while (select_part.firstChild) {
+                select_part.removeChild(select_part.firstChild);
+            }
+            for (let i=0; i<data.systems.length; ++i) {
+                let option = document.createElement('option');
+                option.value = data.systems[i].id;
+                option.innerText = data.parts[i].name;
+                select_part.appendChild(option);
             }
         });
     };

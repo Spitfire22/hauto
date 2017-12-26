@@ -37,7 +37,7 @@ Over break:
 2) make drawings of systems (less than 1-minute per drawing)
 3) make drawings of cooling systems parts (less than 1-minute per drawing)
 4) convert drawings to SVG and host in imgur
-5) Finish up the selection tree to choose a specific system then those parts. (AJAX - in the HTML sheet choicebar.)
+5) Finish up the selection tree to choose a specific system then those parts. (AJAX - in the HTML sheet choicebar.)**ACK! WHAT AM I DOING WRGON!**
 6) Pagentation for the blog postings
 7) Create a app for the media section
 8) Work on styling the pages that need it - even if it isn't final styling, make it easier to visualize

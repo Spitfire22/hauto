@@ -43,3 +43,17 @@ def getsystems(request):
             'name': system.name,
         })
     return JsonResponse(systems)
+
+def getparts(request):
+    system_id = request.GET['system_id']
+    system = System.objects.get(pk=system_id)
+    parts = {'parts':[]}
+    for part in system.part_set.all():
+        parts['parts'].append({
+            'id': part.id,
+            'name': part.name,
+            'manufacturer': part.manufacturer,
+            'number': part.number,
+        })
+    return JsonResponse(parts)
+
