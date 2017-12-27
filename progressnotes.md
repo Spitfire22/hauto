@@ -41,7 +41,7 @@ Over break:
 6) Pagentation for the blog postings
 7) Create a app for the media section
 8) Work on styling the pages that need it - even if it isn't final styling, make it easier to visualize
-9) Fill in the database with at least 200 parts
+9) Fill in the database with at least 200 parts **on Wednesday, up to 70 parts**
     - Get all of the cooling system mapped in
     - Don't worry about all of the choices available - Just get what you can
 10)
