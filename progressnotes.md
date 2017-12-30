@@ -29,6 +29,34 @@ Preoccupied by a single leaf, you won't see the tree
     
 5) document
     - Start making documentation, before the site gets unmanageable.
+    
+6) Future
+    - Realizing in the database a few things:
+        - There should be a clarification note for the part
+            - Cooling has a radiator caps have a pressure rating + link to explain ratings
+            - Cooling has a thermostat temperature rating + link to explain ratings
+        - Companion image for the part
+        - Marking items as Original Equipment or an OE Supplier
+        - Marking items as General Aftermarket Replacement
+        - Marking items as Racing Equipment
+        - Marking Racing Equipment installation items that would require modification
+            - ranking system 1-5 for modification 
+            - explanation on rankings:
+                - 1 = minor modification
+                - 5 = major modification
+        - Duplication of parts can become very easy when entering in database
+            - How can this be prevented in the future?
+            - Can there be an easy way to sort parts in the admin panel based on an attribute?
+        - A part can be linked to multiple systems, having an option to add additional systems attributes to a part would help.
+        - Having an alternate part numbers field (could be outdated part numbers, or cross reference from other manufacturers)  
+        - When a part number matches another have a field where all of those are indicated (hardware, hose clamps, bulbs)   
+        - An explanation field for manufacturers who do not have part numbers
+            - could be boutique parts
+            - or if there is no part number given
+        - For items like hardware:
+            - Bolts & Nuts: thread pitch, specifications, rating, ect ect
+            - Hose clamps: Inner diameter or sizing for the specific hose, strength, material
+            - O-rings: specify the type of O-ring, inner and outer diameter, application, rating, material    
 
 
 Over break:
