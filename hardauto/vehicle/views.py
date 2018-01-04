@@ -52,7 +52,7 @@ def getparts(request):
         parts['parts'].append({
             'id': part.id,
             'name': part.name,
-            'manufacturer': part.manufacturer,
+            'manufacturer': part.manufacturer.name,
             'number': part.number,
         })
     return JsonResponse(parts)

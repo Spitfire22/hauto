@@ -32,13 +32,15 @@ Preoccupied by a single leaf, you won't see the tree
     
 6) Future
     - Realizing in the database a few things:
-        - There should be a clarification note for the part
+        - made the following into the text section:
+            - There should be a clarification note for the part
             - Cooling has a radiator caps have a pressure rating + link to explain ratings
             - Cooling has a thermostat temperature rating + link to explain ratings
         - Companion image for the part
-        - Marking items as Original Equipment or an OE Supplier
-        - Marking items as General Aftermarket Replacement
-        - Marking items as Racing Equipment
+        - Selection: 
+            - Marking items as Original Equipment or an OE Supplier
+            - Marking items as General Aftermarket Replacement
+            - Marking items as Racing Equipment
         - Marking Racing Equipment installation items that would require modification
             - ranking system 1-5 for modification 
             - explanation on rankings:
@@ -150,3 +152,5 @@ Got one item to display from my database to my screen
 Got all of the items from the database displayed on the screen
 Got some of the selection stuff done with Matthews help
 Now I broke it again... @ 3:45
+
+

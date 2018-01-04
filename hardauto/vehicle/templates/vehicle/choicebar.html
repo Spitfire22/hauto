@@ -13,29 +13,14 @@
                 {% endfor %}
             </select>
             <select id="select_model" style="display:none"></select>
-
-
         </div>
         <div class="image_layout">
-            <select id="select_system" style="display:none"></select>
             <div>Systems:</div>
-
-            {% for system in system_choice %}
-            <div>{{ system.name }}</div>
-            {% endfor %}
-
+            <select id="select_system" style="display:none"></select>
         </div>
         <div class="detail_layout">
-
-
             <div>Parts:</div>
-
-            <select id="select_part" style="display:block"></select>
-
-            {% for part in part_choice%}
-            <div>{{ part.name }} {{ part.manufacturer }} {{ part.number }}</div>
-            {% endfor %}
-
+            <select id="select_part" style="display:none"></select>
         </div>
     </div>
 </div>
@@ -90,18 +75,18 @@
         });
     };
 
-    select_part.oninput = function() {
-        let part_id = select_part.options[select_part.selectedIndex].value;
-        console.log('!!!')
-        http_get("{% url 'vehicle:getparts' %}?part_id="+part_id, function (data){
+    select_system.oninput = function() {
+        let system_id = select_system.options[select_system.selectedIndex].value;
+        http_get("{% url 'vehicle:getparts' %}?system_id="+system_id, function (data){
+            console.log(data);
             select_part.style.display = 'block';
             while (select_part.firstChild) {
                 select_part.removeChild(select_part.firstChild);
             }
-            for (let i=0; i<data.systems.length; ++i) {
+            for (let i=0; i<data.parts.length; ++i) {
                 let option = document.createElement('option');
-                option.value = data.systems[i].id;
-                option.innerText = data.parts[i].name;
+                option.value = data.parts[i].id;
+                option.innerText = data.parts[i].name + ' (' + data.parts[i].manufacturer + ')';
                 select_part.appendChild(option);
             }
         });
