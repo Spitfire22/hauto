@@ -1,0 +1,67 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
+
+
+/* helper classes */
+
+.cf:before,
+.cf:after {
+    content: ' ';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* main */
+
+body {
+    margin:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    color: #cecece;
+    background: #55ebfc;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: #55ebfc;
+}
+
+.container {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* styling */
+
+.title {
+    color: black;
+}
+.titlemain {
+    font-size: 230%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+    font-family: 'Londrina Outline', cursive;
+}
+.titlesecond {
+    padding-top: 70px;
+    font-size:100%;
+}
+.titleothers {
+    text-align: right;
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+}

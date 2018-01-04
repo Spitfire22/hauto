@@ -1,9 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HAuto: Road to Enlightenment</title>
+    <meta name="description" content="ae86"/>
+    <meta name="author" content="Allen!!"/>
+    <link rel="stylesheet" type="text/css" href="vc2.css"/>
 </head>
+
 <body>
+    <!-- main container -->
+    <div class="container">
+        <header class="title helper">
+            <h1 class="titlemain">
+                <a class="indexlink" href="{% url 'index' %}">HAuto</a>
+                <a class="indexlink" href="{% url 'vehicle:choicebar' %}">hardauto</a>
+            </h1>
+            <div class="titlesecond">
+            <div class="titleothers">hard auto: may your discovery restore your honor to avenge</div>
+            <div class="titleothers">your losses and bring inevitable victory</div>
+            <div class="titleothers">est 2017</div>
+            </div>
+        </header>
+        <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+        <nav id="main-menu" class="menu">
+            <button class="action action--close"><span class="icon icon--cross"></span></button>
+            <div class="menu_wrap">
+                <ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+                    <!--I know that this will need to be made in javascript and the 'manufacturer' called from the database -->
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Toyota</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">BMW</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Honda</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Lotus</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Holden</a></li>
+                </ul>
+                <!-- Submenu 1 Model -->
+                <ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Toyota">
+                    <!-- This submenu will need to be remade using javascript and 'model' called from the database -->
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">1985-1987 Corolla GTS</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-2" aria-owns="submenu-1-2" href="#">1993-1998 Supra Turbo</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-3" aria-owns="submenu-1-3" href="#">2012-2018 86</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-4" aria-owns="submenu-1-4" href="#">1960-1984 FJ40 Land Cruiser</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-5" aria-owns="submenu-1-5" href="#">1989-1999 MR2 Turbo</a></li>
+                </ul>
+                <!-- Submenu 1-1 System -->
+                <ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="1985-1987 Corolla GTS">
+                    <!-- This submenu will need to be remade using javascript and 'system' called from the database -->
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1-1" aria-owns="submenu-1-1-1" href="#">Cooling System</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1-2" aria-owns="submenu-1-1-2" href="#">Braking System</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1-3" aria-owns="submenu-1-1-3" href="#">Engine Ignition System</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1-4" aria-owns="submenu-1-1-4" href="#">Front Suspension</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" data-submenu="submenu-1-1-5" aria-owns="submenu-1-1-5" href="#">Manual Transmission</a></li>
+                </ul>
+                <!-- Submenu 1-2 Part -->
+                <ul data-menu="submenu-1-1-1" id="submenu-1-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Cooling System">
+                    <!-- This submenu will need to be remade using javascript and 'part' called from the database-->
+                    <li class="menu__item" role="menuitem"><a class="menu_link" href="#">Radiator</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" href="#">Lower Radiator Hose</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" href="#">Thermostat</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" href="#">Water Pump</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu_link" href="#">Overflow Tank Bracket</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
 
 </body>
 
