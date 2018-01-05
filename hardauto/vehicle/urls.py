@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^getmodels/$', views.getmodels, name='getmodels'),
     url(r'^getsystems/$', views.getsystems, name='getsystems'),
     url(r'^getparts/$', views.getparts, name='getparts'),
+    url(r'^getmanufacturedparts/$', views.getmanufacturedparts, name='getmanufacturedparts')
 ]

@@ -6,6 +6,7 @@
     <div class="main_grid">
         <div class="sidebar_layout">
             <div>Vehicle:</div>
+                <div value="{{ make.id }}">{{ make.name }}</div>
             <select id="select_make">
                 <option value="" selected="selected" disabled="disabled">Select a Make</option>
                 {% for make in make_choice %}
@@ -21,6 +22,7 @@
         <div class="detail_layout">
             <div>Parts:</div>
             <select id="select_part" style="display:none"></select>
+            <select id="select_manufacturedpart" style="display:none"></select>
         </div>
     </div>
 </div>
@@ -41,6 +43,7 @@
     let select_model = document.querySelector('#select_model');
     let select_system = document.querySelector('#select_system');
     let select_part = document.querySelector('#select_part');
+    let select_manufacturedpart = document.querySelector('#select_manufacturedpart')
 
     select_make.oninput = function() {
         let make_id = select_make.options[select_make.selectedIndex].value;
@@ -86,7 +89,24 @@
             for (let i=0; i<data.parts.length; ++i) {
                 let option = document.createElement('option');
                 option.value = data.parts[i].id;
-                option.innerText = data.parts[i].name + ' (' + data.parts[i].manufacturer + ')';
+                option.innerText = data.parts[i].name;
+                select_part.appendChild(option);
+            }
+        });
+    };
+
+    select_system.oninput = function() {
+        let part_id = select_part.options[select_part.selectedIndex].value;
+        http_get("{% url 'vehicle:getmanufacturedparts' %}?part_id="+part_id, function (data) {
+            console.log(data);
+            select_manufacturedpart.style.display = 'block';
+            while (select_manufacturedpart.firstChild) {
+                select_manufacturedpart.removeChild(select_manufacturedpart.firstChild);
+            }
+            for (let i=0; i<data.manufacturedparts.length; ++i) {
+                let option = document.createElement('option');
+                option.value = data.manufacturedparts[i].id;
+                option.innerText = data.manufacturedparts[i].name + ' (' + data.parts[i].manufacturer + ')';
                 select_part.appendChild(option);
             }
         });

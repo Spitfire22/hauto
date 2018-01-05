@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Make, Model, System, Manufacturer, Part
+from .models import Make, Model, System, Manufacturer, Part, ManufacturedPart
 from django.http import HttpResponse, JsonResponse
 
 def vehicle_list(request):
@@ -15,11 +15,14 @@ def choicebar(request):
     manu_choice = Manufacturer.objects.all()
     # manufacturer = {'manu_choice': manu_choice}
     part_choice = Part.objects.all()
-    # part = {'part_choice': part_choice)
+    # part = {'part_choice': part_choice}
+    manufacturedpart_choice = ManufacturedPart.objects.all()
+    # manufacturedpart = {'manufacturedpart_choice': manufacturedpart_choice}
 
 
     all_choices = {'make_choice': make_choice, 'model_choice': model_choice, 'system_choice': system_choice,
-                   'manu_choice': manu_choice, 'part_choice': part_choice}
+                   'manu_choice': manu_choice, 'part_choice': part_choice,
+                   'manufacturedpart_choice': manufacturedpart_choice}
     return render(request, 'vehicle/choicebar.html', all_choices)
 
 def getmodels(request):
@@ -41,6 +44,7 @@ def getsystems(request):
         systems['systems'].append({
             'id': system.id,
             'name': system.name,
+            # 'image': system.image,
         })
     return JsonResponse(systems)
 
@@ -52,8 +56,27 @@ def getparts(request):
         parts['parts'].append({
             'id': part.id,
             'name': part.name,
-            'manufacturer': part.manufacturer.name,
-            'number': part.number,
+            'relatedsystem1': part.relatedsystem1,
+            'relatedsystem2': part.relatedsystem2,
+            'relatedsystem3': part.relatedsystem3,
+            # 'image': part.image,
         })
     return JsonResponse(parts)
 
+def getmanufacturedparts(request):
+    part_id = request.GET['part_id']
+    part = Part.objects.get(pk=part_id)
+    manufacturedparts = {'manufactured parts':[]}
+    for manufacturedpart in part.manufacturedpart_set.all():
+        manufacturedparts['manufactured parts'].append({
+            'manufacturer': manufacturedpart.manufacturer.name,
+            'number': manufacturedpart.number,
+            'discontinued_number1': manufacturedpart.discontinued_number1,
+            'discontinued_number2': manufacturedpart.discontinued_number2,
+            'discontinued_number3': manufacturedpart.discontinued_number3,
+            # 'image': manufacturedpart.image,
+            'text': manufacturedpart.text,
+            'cost': manufacturedpart.cost,
+            'grade': manufacturedpart.grade,
+        })
+    return JsonResponse(manufacturedparts)
