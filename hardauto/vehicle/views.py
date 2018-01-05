@@ -44,7 +44,6 @@ def getsystems(request):
         systems['systems'].append({
             'id': system.id,
             'name': system.name,
-            # 'image': system.image,
         })
     return JsonResponse(systems)
 
@@ -52,29 +51,28 @@ def getparts(request):
     system_id = request.GET['system_id']
     system = System.objects.get(pk=system_id)
     parts = {'parts':[]}
-    for part in system.part_set.all():
+    for part in system.part.all():
         parts['parts'].append({
             'id': part.id,
             'name': part.name,
-            'relatedsystem1': part.relatedsystem1,
-            'relatedsystem2': part.relatedsystem2,
-            'relatedsystem3': part.relatedsystem3,
-            # 'image': part.image,
+            'relatedsystem1': part.relatedsystem1.name if part.relatedsystem1 else '',
+            'relatedsystem2': part.relatedsystem2.name if part.relatedsystem2 else '',
+            'relatedsystem3': part.relatedsystem3.name if part.relatedsystem3 else '',
         })
     return JsonResponse(parts)
 
 def getmanufacturedparts(request):
     part_id = request.GET['part_id']
     part = Part.objects.get(pk=part_id)
-    manufacturedparts = {'manufactured parts':[]}
+    manufacturedparts = {'manufacturedparts':[]}
     for manufacturedpart in part.manufacturedpart_set.all():
-        manufacturedparts['manufactured parts'].append({
+        manufacturedparts['manufacturedparts'].append({
+            'id': manufacturedpart.id,
             'manufacturer': manufacturedpart.manufacturer.name,
             'number': manufacturedpart.number,
             'discontinued_number1': manufacturedpart.discontinued_number1,
             'discontinued_number2': manufacturedpart.discontinued_number2,
             'discontinued_number3': manufacturedpart.discontinued_number3,
-            # 'image': manufacturedpart.image,
             'text': manufacturedpart.text,
             'cost': manufacturedpart.cost,
             'grade': manufacturedpart.grade,

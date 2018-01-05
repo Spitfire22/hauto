@@ -5,24 +5,32 @@
 <div class="center-image image_std">
     <div class="main_grid">
         <div class="sidebar_layout">
-            <div>Vehicle:</div>
-                <div value="{{ make.id }}">{{ make.name }}</div>
-            <select id="select_make">
-                <option value="" selected="selected" disabled="disabled">Select a Make</option>
-                {% for make in make_choice %}
-                <option value="{{ make.id }}">{{ make.name }}</option>
-                {% endfor %}
-            </select>
-            <select id="select_model" style="display:none"></select>
+            <div id="button_div">
+                <div>Select:</div>
+                <div id="div_make">
+                    {% for make in make_choice %}
+                    <button class="btn_style" name="bt_make" make_id="{{ make.id }}">{{ make.name }}</button>
+                    {% endfor %}
+                </div>
+                <div id="div_model">
+                    <button id="select_model" style="display:none"></button>
+                </div>
+                <div id="div_system">
+                    <button id="select_system" style="display:none"></button>
+                </div>
+            </div>
         </div>
         <div class="image_layout">
-            <div>Systems:</div>
-            <select id="select_system" style="display:none"></select>
+            <div id="div_part">
+                <div>Part:</div>
+                <button id="select_part"></button>
+            </div>
         </div>
         <div class="detail_layout">
-            <div>Parts:</div>
-            <select id="select_part" style="display:none"></select>
-            <select id="select_manufacturedpart" style="display:none"></select>
+            <div id="div_manufacturedpart">
+                <div>Part Details:</div>
+                <button id="select_manufacturedpart"></button>
+            </div>
         </div>
     </div>
 </div>
@@ -39,78 +47,103 @@
         xhttp.send();
     }
 
-    let select_make = document.querySelector('#select_make');
-    let select_model = document.querySelector('#select_model');
-    let select_system = document.querySelector('#select_system');
-    let select_part = document.querySelector('#select_part');
-    let select_manufacturedpart = document.querySelector('#select_manufacturedpart')
+    let select_make = document.getElementById('select_make');
+    let div_make = document.getElementById('div_make');
+    let select_model = document.getElementById('select_model');
+    let div_model = document.getElementById('div_model');
+    let select_system = document.getElementById('select_system');
+    let div_system = document.getElementById('div_system');
+    let select_part = document.getElementById('select_part');
+    let div_part = document.getElementById('div_part');
+    let select_manufacturedpart = document.getElementById('select_manufacturedpart');
+    let div_manufacturedpart = document.getElementById('div_manufacturedpart');
 
-    select_make.oninput = function() {
-        let make_id = select_make.options[select_make.selectedIndex].value;
-        http_get("{% url 'vehicle:getmodels' %}?make_id="+make_id, function (data) {
-            select_model.style.display = 'block';
-            while (select_model.firstChild) {
-                select_model.removeChild(select_model.firstChild);
-            }
-            for (let i=0; i<data.models.length; ++i) {
-                let option = document.createElement('option');
-                option.value = data.models[i].id;
-                option.innerText = data.models[i].name;
-                select_model.appendChild(option);
-            }
-            select_model.oninput();
-        });
-    };
-
-    select_model.oninput = function() {
-        let model_id = select_model.options[select_model.selectedIndex].value;
-        http_get("{% url 'vehicle:getsystems' %}?model_id="+model_id, function (data){
-            select_system.style.display = 'block';
-            while (select_system.firstChild) {
-                select_system.removeChild(select_system.firstChild);
-            }
-            for (let i=0; i<data.systems.length; ++i) {
-                let option = document.createElement('option');
-                option.value = data.systems[i].id;
-                option.innerText = data.systems[i].name;
-                select_system.appendChild(option);
-            }
-        });
-    };
-
-    select_system.oninput = function() {
-        let system_id = select_system.options[select_system.selectedIndex].value;
-        http_get("{% url 'vehicle:getparts' %}?system_id="+system_id, function (data){
-            console.log(data);
-            select_part.style.display = 'block';
-            while (select_part.firstChild) {
-                select_part.removeChild(select_part.firstChild);
-            }
-            for (let i=0; i<data.parts.length; ++i) {
-                let option = document.createElement('option');
-                option.value = data.parts[i].id;
-                option.innerText = data.parts[i].name;
-                select_part.appendChild(option);
-            }
-        });
-    };
-
-    select_system.oninput = function() {
-        let part_id = select_part.options[select_part.selectedIndex].value;
-        http_get("{% url 'vehicle:getmanufacturedparts' %}?part_id="+part_id, function (data) {
-            console.log(data);
-            select_manufacturedpart.style.display = 'block';
-            while (select_manufacturedpart.firstChild) {
-                select_manufacturedpart.removeChild(select_manufacturedpart.firstChild);
-            }
-            for (let i=0; i<data.manufacturedparts.length; ++i) {
-                let option = document.createElement('option');
-                option.value = data.manufacturedparts[i].id;
-                option.innerText = data.manufacturedparts[i].name + ' (' + data.parts[i].manufacturer + ')';
-                select_part.appendChild(option);
-            }
-        });
-    };
+    let bt_makes = document.querySelectorAll('*[name=bt_make');
+    for (let i=0; i<bt_makes.length; ++i) {
+        bt_makes[i].onclick = function() {
+            // alert(this.getAttribute('make_id'));
+            // getAttribute is a function for calling custom attributes
+            let make_id = this.getAttribute('make_id');
+            // console.log(make_id);
+            http_get("{% url 'vehicle:getmodels' %}?make_id="+make_id, function(data){
+                while (div_model.firstChild) {
+                    div_model.removeChild(div_model.firstChild);
+                }
+                for (let i=0; i<data.models.length; ++i) {
+                    let button = document.createElement('button');
+                    button.setAttribute('model_id', data.models[i].id);
+                    button.innerText = data.models[i].name;
+                    button.onclick = function() {
+                        let model_id = this.getAttribute('model_id');
+                        // console.log(model_id);
+                        // to an ajax request for the systems
+                        http_get("{% url 'vehicle:getsystems' %}?model_id="+model_id, function(data){
+                            while (div_system.firstChild) {
+                                div_system.removeChild(div_system.firstChild);
+                            }
+                            for (let i=0; i<data.systems.length; ++i) {
+                                let button = document.createElement('button');
+                                button.setAttribute('system_id', data.systems[i].id);
+                                button.innerText = data.systems[i].name;
+                                button.onclick = function() {
+                                    let system_id = this.getAttribute('system_id');
+                                    // console.log(system_id);
+                                    http_get("{% url 'vehicle:getparts' %}?system_id="+system_id, function(data){
+                                        while (div_part.firstChild) {
+                                            div_part.removeChild(div_part.firstChild);
+                                        }
+                                        for (let i=0; i<data.parts.length; ++i) {
+                                            let button = document.createElement('button');
+                                            button.setAttribute('part_id', data.parts[i].id);
+                                            button.innerText=data.parts[i].name;
+                                            button.onclick=function(){
+                                                let part_id = this.getAttribute('part_id');
+                                                // console.log(part_id);
+                                                http_get("{% url 'vehicle:getmanufacturedparts' %}?part_id="+part_id, function(data){
+                                                    console.log(data);
+                                                    while (div_manufacturedpart.firstChild) {
+                                                        div_manufacturedpart.removeChild(div_manufacturedpart.firstChild);
+                                                    }
+                                                    for (let i=0; i<data.manufacturedparts.length; ++i) {
+                                                        let button = document.createElement('button');
+                                                        button.setAttribute('manufacturedpart_id', data.manufacturedparts[i].id);
+                                                        button.innerText=data.manufacturedparts[i].manufacturer;
+                                                        div_manufacturedpart.appendChild(button);
+                                                    }
+                                                    div_make.style.display = 'none';
+                                                    div_model.style.display = 'none';
+                                                    div_system.style.display = 'block';
+                                                //    click event on manufactured part
+                                                })
+                                            };
+                                            div_part.appendChild(button);
+                                        }
+                                        div_make.style.display = 'none';
+                                        div_model.style.display = 'none';
+                                        div_system.style.display = 'block';
+                                    //    click even on part
+                                    })
+                                };
+                                div_system.appendChild(button);
+                            }
+                            div_make.style.display = 'none';
+                            div_model.style.display = 'none';
+                            div_system.style.display = 'block';
+                        //    click even on system
+                        })
+                    };
+                    div_model.appendChild(button);
+                }
+                div_make.style.display = 'none';
+                div_model.style.display = 'block';
+                div_system.style.display = 'none';
+            //    click even on model
+            });
+            // do the ajax request to get a list of model for this make
+            // make the 'make' container invisible
+            // make the model container visible
+        }
+    }
 
 </script>
 

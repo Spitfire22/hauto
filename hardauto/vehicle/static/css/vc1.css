@@ -95,9 +95,20 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
     color: #ffffff;
 }
 
+/* page styling */
+.btn_style {
+    margin: 5px;
+    font-size: 120%;
+    background-color:transparent;
+    border:none;
+
+}
+
+
 /* footer styling*/
 .footy{
     font-size: 70%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
+
