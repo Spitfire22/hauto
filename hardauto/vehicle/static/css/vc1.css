@@ -83,27 +83,30 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
     grid-area: s;
     background-color: rgba(0,255,0,.4);
     color: #ffffff;
+    overflow-y: auto;
 }
 .image_layout{
     grid-area: i;
     background-color: rgba(255,0,0,.4);
     color: #ffffff;
+    overflow-y: auto;
 }
 .detail_layout{
     grid-area: d;
     background-color: rgba(0,0,255,.4);
     color: #ffffff;
+    overflow-y: auto;
 }
 
 /* page styling */
 .btn_style {
     margin: 5px;
-    font-size: 120%;
+    font-size: 80%;
     background-color:transparent;
     border:none;
-
+    color: #fff;
+    width: 100%;
 }
-
 
 /* footer styling*/
 .footy{

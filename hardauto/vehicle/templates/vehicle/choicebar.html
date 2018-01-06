@@ -13,23 +13,19 @@
                     {% endfor %}
                 </div>
                 <div id="div_model">
-                    <button id="select_model" style="display:none"></button>
                 </div>
                 <div id="div_system">
-                    <button id="select_system" style="display:none"></button>
                 </div>
             </div>
         </div>
         <div class="image_layout">
+            <div>Parts:</div>
             <div id="div_part">
-                <div>Part:</div>
-                <button id="select_part"></button>
             </div>
         </div>
         <div class="detail_layout">
+            <div>Details:</div>
             <div id="div_manufacturedpart">
-                <div>Part Details:</div>
-                <button id="select_manufacturedpart"></button>
             </div>
         </div>
     </div>
@@ -72,6 +68,7 @@
                 for (let i=0; i<data.models.length; ++i) {
                     let button = document.createElement('button');
                     button.setAttribute('model_id', data.models[i].id);
+                    button.setAttribute('class', 'btn_style');
                     button.innerText = data.models[i].name;
                     button.onclick = function() {
                         let model_id = this.getAttribute('model_id');
@@ -84,6 +81,7 @@
                             for (let i=0; i<data.systems.length; ++i) {
                                 let button = document.createElement('button');
                                 button.setAttribute('system_id', data.systems[i].id);
+                                button.setAttribute('class', 'btn_style');
                                 button.innerText = data.systems[i].name;
                                 button.onclick = function() {
                                     let system_id = this.getAttribute('system_id');
@@ -95,6 +93,7 @@
                                         for (let i=0; i<data.parts.length; ++i) {
                                             let button = document.createElement('button');
                                             button.setAttribute('part_id', data.parts[i].id);
+                                            button.setAttribute('class', 'btn_style');
                                             button.innerText=data.parts[i].name;
                                             button.onclick=function(){
                                                 let part_id = this.getAttribute('part_id');
@@ -107,7 +106,8 @@
                                                     for (let i=0; i<data.manufacturedparts.length; ++i) {
                                                         let button = document.createElement('button');
                                                         button.setAttribute('manufacturedpart_id', data.manufacturedparts[i].id);
-                                                        button.innerText=data.manufacturedparts[i].manufacturer;
+                                                        button.setAttribute('class', 'btn_style');
+                                                        button.innerText=data.manufacturedparts[i].manufacturer + ' ' + data.manufacturedparts[i].number;
                                                         div_manufacturedpart.appendChild(button);
                                                     }
                                                     div_make.style.display = 'none';
