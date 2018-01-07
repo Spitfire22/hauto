@@ -28,6 +28,10 @@
             <div id="div_manufacturedpart">
             </div>
         </div>
+        <div class="main_overlay hidden" id="overlay">
+            <div id="div_mfp_details"></div>
+            <button class="close_overlay" id="ol_close">Close</button>
+        </div>
     </div>
 </div>
 <script>
@@ -53,6 +57,12 @@
     let div_part = document.getElementById('div_part');
     let select_manufacturedpart = document.getElementById('select_manufacturedpart');
     let div_manufacturedpart = document.getElementById('div_manufacturedpart');
+    let overlay = document.getElementById('overlay');
+    let div_mfp_details = document.getElementById('div_mfp_details');
+
+    function toggle_hidden(){
+        overlay.classList.toggle('hidden')
+    }
 
     let bt_makes = document.querySelectorAll('*[name=bt_make');
     for (let i=0; i<bt_makes.length; ++i) {
@@ -109,6 +119,14 @@
                                                         button.setAttribute('class', 'btn_style');
                                                         button.innerText=data.manufacturedparts[i].manufacturer + ' ' + data.manufacturedparts[i].number;
                                                         div_manufacturedpart.appendChild(button);
+                                                        // button.onclick=function (){
+                                                        //     let div = document.createElement('div');
+                                                        //     console.log(data.manufacturedpart.id);
+                                                        //     div.setAttribute('class', 'overlay_mfg_div');
+                                                        //     div.innerText = data.manufacturedparts[i].maufacturer;
+                                                        //     div.setAttribute('class')
+                                                        //     toggle_hidden()
+                                                        // }
                                                     }
                                                     div_make.style.display = 'none';
                                                     div_model.style.display = 'none';

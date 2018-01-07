@@ -108,6 +108,27 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
     width: 100%;
 }
 
+/* manufactured part overlay */
+.hidden{
+    display:none;
+}
+
+.main_overlay {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 95%;
+  height: 95%;
+  background-color:rgba(0, 0, 0, 0.4);
+}
+
+.close_overlay {
+  width: 150px;
+  font-size: 120%;
+  background-color: lightgrey;
+  text-align: center;
+}
+
 /* footer styling*/
 .footy{
     font-size: 70%;
