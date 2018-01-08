@@ -107,9 +107,9 @@
                                             button.innerText=data.parts[i].name;
                                             button.onclick=function(){
                                                 let part_id = this.getAttribute('part_id');
-                                                // console.log(part_id);
+                                                console.log(part_id);
                                                 http_get("{% url 'vehicle:getmanufacturedparts' %}?part_id="+part_id, function(data){
-                                                    console.log(data);
+                                                    // console.log(data);
                                                     while (div_manufacturedpart.firstChild) {
                                                         div_manufacturedpart.removeChild(div_manufacturedpart.firstChild);
                                                     }
@@ -119,14 +119,33 @@
                                                         button.setAttribute('class', 'btn_style');
                                                         button.innerText=data.manufacturedparts[i].manufacturer + ' ' + data.manufacturedparts[i].number;
                                                         div_manufacturedpart.appendChild(button);
-                                                        // button.onclick=function (){
-                                                        //     let div = document.createElement('div');
-                                                        //     console.log(data.manufacturedpart.id);
-                                                        //     div.setAttribute('class', 'overlay_mfg_div');
-                                                        //     div.innerText = data.manufacturedparts[i].maufacturer;
-                                                        //     div.setAttribute('class')
-                                                        //     toggle_hidden()
-                                                        // }
+                                                        button.onclick=function (){
+                                                            let manufacturedpart_id = this.getAttribute('manufacturedpart_id');
+                                                            // let manufacturedpart_number = this.getAttribute('manufacturedpart_number');
+                                                            // console.log(data.manufacturedpart);
+                                                            console.log(data);
+                                                            console.log(data.manufacturedparts[i].manufacturer);
+                                                            console.log(data.manufacturedparts[i].number);
+                                                            console.log(data.manufacturedparts[i].text);
+                                                            console.log(data.manufacturedparts[i].grade);
+                                                            // console.log(data[i].id);
+                                                            // console.log(manufacturedpart_id, manufacturedpart_id.manufacturer);
+                                                            // console.log(manufacturedpart_id, manufacturedpart_number);
+                                                            // console.log(data.manufacturedparts[manufacturedpart_id].manufacturer.number);
+                                                            // console.log(manufacturedpart_id)
+                                                            // for (let i=0; i<data.manufacturedparts.length; ++i) {
+                                                            //     let div = document.createElement('div');
+                                                            //     div.setAttribute('class', 'overlay_mfg_div');
+                                                            //     div.innerText=data.manufacturedparts[i].manufacturer;
+                                                            // }
+                                                            toggle_hidden()
+                                                            // let div = document.createElement('div');
+                                                            // console.log(data.manufacturedpart.id);
+                                                            // div.setAttribute('class', 'overlay_mfg_div');
+                                                            // div.innerText = data.manufacturedparts[i].maufacturer;
+                                                            // div.setAttribute('class')
+                                                            // toggle_hidden()
+                                                        }
                                                     }
                                                     div_make.style.display = 'none';
                                                     div_model.style.display = 'none';

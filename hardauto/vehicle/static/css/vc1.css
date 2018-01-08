@@ -129,6 +129,11 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
   text-align: center;
 }
 
+.overlay_mfg {
+    font-size: 200%;
+    color: red;
+}
+
 /* footer styling*/
 .footy{
     font-size: 70%;
