@@ -84,18 +84,21 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
     background-color: rgba(0,255,0,.4);
     color: #ffffff;
     overflow-y: auto;
+    box-shadow: 0 0 250px rgba(0,0,0,0.95) inset;
 }
 .image_layout{
     grid-area: i;
     background-color: rgba(255,0,0,.4);
     color: #ffffff;
     overflow-y: auto;
+    box-shadow: 0 0 250px rgba(0,0,0,0.95) inset;
 }
 .detail_layout{
     grid-area: d;
     background-color: rgba(0,0,255,.4);
     color: #ffffff;
     overflow-y: auto;
+    box-shadow: 0 0 250px rgba(0,0,0,0.95) inset;
 }
 
 /* page styling */
@@ -109,30 +112,23 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
 }
 
 /* manufactured part overlay */
+/* The rest of this design is located in popstyle.css */
 .hidden{
     display:none;
 }
 
 .main_overlay {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 95%;
-  height: 95%;
-  background-color:rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 20px;
+    top: 70px;
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(to bottom right, rgba(85, 235, 252), rgba(255, 255, 255));
+    border: 10px solid yellow;
+    border-radius: 15px;
+    box-shadow: 0 0 250px rgba(0,0,0,0.95) inset;
 }
 
-.close_overlay {
-  width: 150px;
-  font-size: 120%;
-  background-color: lightgrey;
-  text-align: center;
-}
-
-.div_mfp_details {
-    font-size: 200%;
-    color: red;
-}
 
 /* footer styling*/
 .footy{

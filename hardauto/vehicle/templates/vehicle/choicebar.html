@@ -29,9 +29,42 @@
             </div>
         </div>
         <div class="main_overlay hidden" id="overlay">
-            <div id="div_mfp_details"> this is a test </div>
-            <button class="close_overlay" id="ol_close">Close</button>
+            <div class="overlay_grid">
+                <div class="btn_close_top">
+                    <button class="btn_close" id="ol_close_top" onclick="toggle_hidden()">Close</button>
+                </div>
+                <div class="header">
+                        <div id="div_mfp_details"></div>
+                        <div id="div_mfp_partname"></div>
+                        <div id="div_mfp_grade"></div>
+                </div>
+                <div class="image">
+                    <div id="div_mfp_img">
+                        I am not an image. ¯\_(ツ)_/¯
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="detail_div">Part Number:
+                        <div id="div_mfp_number"></div>
+                    </div>
+                    <div class="detail_div">Discontinued Part Numbers:
+                        <div id="div_mfp_disnum1"></div>
+                        <div id="div_mfp_disnum2"></div>
+                        <div id="div_mfp_disnum3"></div>
+                    </div>
+                    <div class="detail_div">Notes:
+                        <div id="div_mfp_text"></div>
+                    </div>
+                    <div class="detail_div">Cost:
+                        <div id="div_mfp_cost"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
+    <div id="part_overlay">
+        <span id="part_name"></span>
     </div>
 </div>
 <script>
@@ -59,7 +92,15 @@
     let div_manufacturedpart = document.getElementById('div_manufacturedpart');
     let overlay = document.getElementById('overlay');
     let div_mfp_details = document.getElementById('div_mfp_details');
-    let ol_close = document.getElementById('ol_close');
+    let div_mfp_partname = document.getElementById('div_mfp_partname');
+    let div_mfp_number = document.getElementById('div_mfp_number');
+    let div_mfp_disnum1 = document.getElementById('div_mfp_disnum1');
+    let div_mfp_disnum2 = document.getElementById('div_mfp_disnum2');
+    let div_mfp_disnum3 = document.getElementById('div_mfp_disnum3');
+    let div_mfp_img = document.getElementById('div_mfp_img');
+    let div_mfp_text = document.getElementById('div_mfp_text');
+    let div_mfp_cost = document.getElementById('div_mfp_cost');
+    let div_mfp_grade = document.getElementById('div_mfp_grade');
 
     function toggle_hidden(){
         overlay.classList.toggle('hidden')
@@ -120,12 +161,80 @@
                                                         button.setAttribute('class', 'btn_style');
                                                         button.innerText=data.manufacturedparts[i].manufacturer + ' ' + data.manufacturedparts[i].number;
                                                         div_manufacturedpart.appendChild(button);
-                                                        button.onclick=function (){
+                                                        button.onclick=function () {
+                                                            while (div_mfp_details.firstChild) {
+                                                                div_mfp_details.removeChild(div_mfp_details.firstChild);
+                                                            }
                                                             let div_mfg = document.createElement('div');
-                                                                   div_mfg.setAttribute('class', 'mfg_div_detail');
-                                                                   div_mfg.innerText = data.manufacturedparts[i].manufacturer;
-                                                                   console.log(div_mfg);
-                                                                   div_mfp_details.appendChild(div_mfg);
+                                                                div_mfg.setAttribute('class', 'mfg_div_detail');
+                                                                div_mfg.innerText = 'Manufacturer: ' + data.manufacturedparts[i].manufacturer;
+                                                                console.log(div_mfg);
+                                                                div_mfp_details.appendChild(div_mfg);
+                                                            while (div_mfp_partname.firstChild) {
+                                                                div_mfp_partname.removeChild(div_mfp_partname.firstChild);
+                                                            }
+                                                            let div_mfpname = document.createElement('div');
+                                                                div_mfpname.setAttribute('class', 'mfg_div_mfpname');
+                                                                div_mfpname.innerText = data.manufacturedparts[i].part;
+                                                                console.log(div_mfpname);
+                                                                console.log(data.manufacturedparts[i].part);
+                                                                div_mfp_partname.appendChild(div_mfpname);
+                                                            while (div_mfp_number.firstChild) {
+                                                                div_mfp_number.removeChild(div_mfp_number.firstChild);
+                                                            }
+                                                            let div_mfpnum = document.createElement('div');
+                                                                div_mfpnum.setAttribute('class', 'mfg_div_pnum');
+                                                                div_mfpnum.innerText = data.manufacturedparts[i].number;
+                                                                div_mfp_number.appendChild(div_mfpnum);
+                                                            while (div_mfp_disnum1.firstChild) {
+                                                                div_mfp_disnum1.removeChild(div_mfp_disnum1.firstChild);
+                                                            }
+                                                            let div_mfpdisco1 = document.createElement('div');
+                                                                div_mfpdisco1.setAttribute('class', 'mfg_div_disconum1');
+                                                                div_mfpdisco1.innerText = data.manufacturedparts[i].discontinued_number1;
+                                                                div_mfp_disnum1.appendChild(div_mfpdisco1);
+                                                            while (div_mfp_disnum2.firstChild) {
+                                                                div_mfp_disnum2.removeChild(div_mfp_disnum2.firstChild);
+                                                            }
+                                                            let div_mfpdisco2 = document.createElement('div');
+                                                                div_mfpdisco2.setAttribute('class', 'mfg_div_disconum2');
+                                                                div_mfpdisco2.innerText = data.manufacturedparts[i].discontinued_number2;
+                                                                div_mfp_disnum2.appendChild(div_mfpdisco2);
+                                                            while (div_mfp_disnum3.firstChild) {
+                                                                div_mfp_disnum3.removeChild(div_mfp_disnum3.firstChild);
+                                                            }
+                                                            let div_mfpdisco3 = document.createElement('div');
+                                                                div_mfpdisco3.setAttribute('class', 'mfg_div_disconum3');
+                                                                div_mfpdisco3.innerText = data.manufacturedparts[i].discontinued_number3;
+                                                                div_mfp_disnum3.appendChild(div_mfpdisco3);
+                                                            // while (div_mfp_img.firstChild) {
+                                                            //     div_mfp_img.removeChild(div_mfp_img.firstChild);
+                                                            // }
+                                                            // let div_mfppic = document.createElement('div');
+                                                            //     div_mfppic.setAttribute('class', 'mfg_div_image');
+                                                            //     div_mfppic.innerText = data.manufacturedparts[i].image;
+                                                            //     div_mfp_img.appendChild(div_mfppic);
+                                                            while (div_mfp_text.firstChild) {
+                                                                div_mfp_text.removeChild(div_mfp_text.firstChild);
+                                                            }
+                                                            let div_mfptxt = document.createElement('div');
+                                                                div_mfptxt.setAttribute('class', 'mfg_div_text');
+                                                                div_mfptxt.innerText = data.manufacturedparts[i].text;
+                                                                div_mfp_text.appendChild(div_mfptxt);
+                                                            while (div_mfp_cost.firstChild) {
+                                                                div_mfp_cost.removeChild(div_mfp_cost.firstChild)
+                                                            }
+                                                            let div_mfpcost = document.createElement('div');
+                                                                div_mfpcost.setAttribute('class', 'mfg_div_cost');
+                                                                div_mfpcost.innerText = data.manufacturedparts[i].cost;
+                                                                div_mfp_cost.appendChild(div_mfpcost);
+                                                            while (div_mfp_grade.firstChild) {
+                                                                div_mfp_grade.removeChild(div_mfp_grade.firstChild);
+                                                            }
+                                                            let div_mfpgrade = document.createElement('div');
+                                                                div_mfpgrade.setAttribute('class', 'mfg_div_grade');
+                                                                div_mfpgrade.innerText = data.manufacturedparts[i].grade;
+                                                                div_mfp_grade.appendChild(div_mfpgrade);
                                                             // let manufacturedpart_id = this.getAttribute('manufacturedpart_id');
                                                             // console.log(manufacturedpart_id);
                                                             // http_get("{% url 'vehicle:getmanufacturedparts' %}?part_id="+part_id, function(data){

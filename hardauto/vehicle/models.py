@@ -58,11 +58,11 @@ class ManufacturedPart(models.Model):
     text = models.TextField(blank=True)
     cost = models.CharField(max_length=20, blank=True)
 
-    UNKNOWN_GRADE = 'NA'
-    ORIGINAL_EQUIPMENT = 'OEM'
-    OE_REPLACEMENT = 'OE REP'
-    PERFORMANCE = 'PREF'
-    RACING = 'RACE'
+    UNKNOWN_GRADE = 'Grade Unspecified'
+    ORIGINAL_EQUIPMENT = 'Original Equipment Manufacturer'
+    OE_REPLACEMENT = 'Aftermarket Replacement'
+    PERFORMANCE = 'Preformance'
+    RACING = 'Race Specific'
     GRADE_CHOICES = (
         (UNKNOWN_GRADE, 'N/A'),
         (ORIGINAL_EQUIPMENT, 'Original Equipment'),

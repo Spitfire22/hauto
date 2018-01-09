@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600i');
+@import url('https://fonts.googleapis.com/css?family=Monofett');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+.overlay_grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 25px 150px 400px;
+    grid-template-areas:
+            ". . . . . . . . . . . tc"
+            ". h h h h h h h h h h ."
+            ". i i i i d d d d d d .";
+}
+.header {
+    grid-area: h;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: linear-gradient(rgba(255, 97, 39), rgba(255, 255, 255));
+}
+.image {
+    grid-area: i;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255), rgba(255, 193, 236));
+}
+.details {
+    grid-area: d;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255), rgba(225, 0, 167));
+}
+.btn_close_top {
+    grid-area: tc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* close button*/
+.btn_close {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: .4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+.btn_close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* header area */
+.mfg_div_detail {
+    font-family: 'Rubik', sans-serif;
+    font-size: 200%;
+    color: black;
+}
+.mfg_div_partname {
+    font-size: 200%;
+    color: red;
+}
+.mfg_div_grade {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 200%;
+}
+
+/* image area*/
+
+
+
+/* detail area*/
+.detail_div{
+    width: 320px;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0;
+}
+.mfg_div_pnum {
+
+}
+.mfg_div_disconum1 {
+
+}
+.mfg_div_disconum2 {
+
+}
+.mfg_div_disconum3 {
+
+}
+.mfg_div_text {
+
+}
+.mfg_div_cost {
+
+}
