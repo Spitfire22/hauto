@@ -170,15 +170,15 @@
                                                                 div_mfg.innerText = 'Manufacturer: ' + data.manufacturedparts[i].manufacturer;
                                                                 console.log(div_mfg);
                                                                 div_mfp_details.appendChild(div_mfg);
-                                                            while (div_mfp_partname.firstChild) {
-                                                                div_mfp_partname.removeChild(div_mfp_partname.firstChild);
-                                                            }
-                                                            let div_mfpname = document.createElement('div');
-                                                                div_mfpname.setAttribute('class', 'mfg_div_mfpname');
-                                                                div_mfpname.innerText = data.manufacturedparts[i].part;
-                                                                console.log(div_mfpname);
-                                                                console.log(data.manufacturedparts[i].part);
-                                                                div_mfp_partname.appendChild(div_mfpname);
+                                                            // while (div_mfp_partname.firstChild) {
+                                                            //     div_mfp_partname.removeChild(div_mfp_partname.firstChild);
+                                                            // }
+                                                            // let div_mfpname = document.createElement('div');
+                                                            //     div_mfpname.setAttribute('class', 'mfg_div_mfpname');
+                                                            //     div_mfpname.innerText = data.manufacturedparts[i].part;
+                                                            //     console.log(div_mfpname);
+                                                            //     console.log(data.manufacturedparts[i].part);
+                                                            //     div_mfp_partname.appendChild(div_mfpname);
                                                             while (div_mfp_number.firstChild) {
                                                                 div_mfp_number.removeChild(div_mfp_number.firstChild);
                                                             }

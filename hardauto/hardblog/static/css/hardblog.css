@@ -11,6 +11,7 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 
 
 /* 2 - Page Layouts */
@@ -21,6 +22,14 @@
 
 body {
     margin: 0;
+}
+
+.btn-default {
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+.btn-default:visited {
+    color:yellow;
 }
 
 
@@ -91,13 +100,53 @@ url(https://i.imgur.com/Ax8M3WN.jpg);
             ". . f f f f f f f f f ."
             ". . f f f f f f f f f .";
 }
+
 .full_post{
     grid-area: f;
     color: white;
+    overflow-y:auto;
+    text-align: center;
+    height: 900px;
 }
 .comment {
     margin: 20px 0px 20px 20px;
 }
+.post_title{
+    text-decoration: none;
+    font-size:450%;
+    font-family: 'Bangers', cursive;
+    color:white;
+}
+.blogposttitle:link{
+    color:white;
+}
+.blogposttitle:visited{
+    color: yellow;
+}
+.post_title:hover{
+    text-decoration:none;
+}
+.post_title:active{
+    text-decoration:none;
+}
+
+.pub_date {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post_text {
+    font-family: 'Montserrat', sans-serif;
+}
+.pub_date {
+    font-family: 'Montserrat', sans-serif;
+}
+.date {
+    font-family: 'Montserrat', sans-serif;
+}
+.comment {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 /* footer styling*/
 .footy{

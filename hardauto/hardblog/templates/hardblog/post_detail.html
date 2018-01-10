@@ -27,11 +27,11 @@
                     <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="approve">Approve</span></a>
                 {% endif %}
             </div>
-            <strong>{{ comment.author }}</strong>
-            <p>{{ comment.text|linebreaks }}</p>
+            <strong class="comment">{{ comment.author }}</strong>
+            <p class="comment">{{ comment.text|linebreaks }}</p>
         </div>
     {% endif %}
 {% empty %}
-    <p>No one has commented yet.</p>
+    <p class="comment">No one has commented yet.</p>
 {% endfor %}
 {% endblock %}

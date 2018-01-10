@@ -71,7 +71,7 @@ class ManufacturedPart(models.Model):
         (RACING, 'Racing Only'),
     )
     grade = models.CharField(
-        max_length=20,
+        max_length=40,
         choices=GRADE_CHOICES,
         default=UNKNOWN_GRADE,
     )

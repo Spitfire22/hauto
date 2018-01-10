@@ -85,9 +85,9 @@
 /* detail area*/
 .detail_div{
     width: 320px;
+    margin: 5px;
     padding: 20px;
-    border: 5px solid gray;
-    margin: 0;
+    border: 2px solid gray;
 }
 .mfg_div_pnum {
 

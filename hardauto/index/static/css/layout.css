@@ -130,7 +130,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .veh_one{
-    background: -moz-linear-gradient(bottom, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/eJJIrQj.jpg);
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/ROwIFck.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position: center;
@@ -156,7 +156,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .veh_two{
-    background: -moz-linear-gradient(bottom, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/PZxIOka.jpg);
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/PZxIOka.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position: center;
@@ -182,7 +182,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .veh_three{
-    background: -moz-linear-gradient(bottom, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/HuPdFxc.jpg);
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/HuPdFxc.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position: center;
@@ -255,7 +255,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .site_one{
-    background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/n1nYo2T.jpg);
+    background: -moz-linear-gradient(right, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/n1nYo2T.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
@@ -280,7 +280,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .site_two {
-    background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/48YWRHF.jpg);
+    background: -moz-linear-gradient(right, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/48YWRHF.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
@@ -305,7 +305,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .site_three{
-    background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/nzP4a39.jpg);
+    background: -moz-linear-gradient(right, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/nzP4a39.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
@@ -376,7 +376,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .blog_one{
-    background: -moz-linear-gradient(right, rgba(0,128,128,0.45), rgba(227,38,54,0.45)), url(https://i.imgur.com/Mi6vMHB.jpg);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/Mi6vMHB.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
@@ -401,7 +401,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .blog_two{
-    background: -moz-linear-gradient(right, rgba(0,72,186, 0.45), rgba(0,128,128,0.45)), url(https://i.imgur.com/FJK904Z.jpg);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/FJK904Z.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
@@ -426,7 +426,7 @@ url(http://www.tomeipowered.com/BTE/uploads/2015/12/IMG_0168-L.jpg);
     font-size: 150%;
 }
 .blog_three{
-    background: -moz-linear-gradient(right, rgba(227,38,54,0.45), rgba(0,72,186, 0.45)), url(https://i.imgur.com/35yeNIP.jpg);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.45), rgba(255,255,255,0.45)), url(https://i.imgur.com/35yeNIP.jpg);
     background-size: 100%;
     background-position: center;
     transition: 2s;
